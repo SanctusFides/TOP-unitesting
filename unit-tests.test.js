@@ -2,7 +2,7 @@ const capitalize = require("./capitalize");
 const reverseString = require("./reverse-string");
 const Calculator = require("./calculator");
 const calc = new Calculator();
-
+const caesarCipher = require("./caesar-cipher"); 
 
 it ('Capitalization Test', () => {
     expect(capitalize("test")).toBe("Test");
@@ -28,4 +28,8 @@ it ("Calculator - Multiply Test", () => {
 
 it ("Calculator - Divide Test", () => {
     expect(calc.divide(4,2)).toBe(2);
+})
+
+it ("Caesar Cipher Test", () => {
+    expect(caesarCipher(test, 1)).toBe("uftu");
 })
