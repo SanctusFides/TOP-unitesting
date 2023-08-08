@@ -9,7 +9,6 @@ function caesarCipher(word, factor) {
     if (letter === letter.toLowerCase()) {
       if (letterValue + factor > 122) {
         let newValue = String.fromCharCode(letterValue + factor - 26);
-        console.log(newValue);
         codedWord += newValue;
       } else {
         codedWord += String.fromCharCode(letterValue + factor);
@@ -17,7 +16,6 @@ function caesarCipher(word, factor) {
     } else if (letter === letter.toUpperCase())
       if (letterValue + factor > 90) {
         let newValue = String.fromCharCode(letterValue + factor - 26);
-        console.log(newValue);
         codedWord += newValue;
       } else {
         codedWord += String.fromCharCode(letterValue + factor);

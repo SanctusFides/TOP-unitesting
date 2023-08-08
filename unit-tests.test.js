@@ -3,6 +3,8 @@ const reverseString = require("./reverse-string");
 const Calculator = require("./calculator");
 const calc = new Calculator();
 const caesarCipher = require("./caesar-cipher"); 
+const analyzeArray = require("./analyze-array");
+const analyze = new analyzeArray([2,8,3,4,1,6]);
 
 it ('Capitalization Test', () => {
     expect(capitalize("test")).toBe("Test");
@@ -59,4 +61,20 @@ it ("Caesar Cipher - Z & 1", () => {
 it ("Caesar Cipher - y & 3", () => {
     expect(caesarCipher("y", 3)).toBe("b");
     expect(caesarCipher("Y", 3)).toBe("B");
+})
+
+it ("Analyze Array - Average", () => {
+    expect(analyze.average()).toBe(4);
+})
+
+it ("Analyze Array - Min", () => {
+    expect(analyze.min()).toBe(1);
+})
+
+it ("Analyze Array - Max", () => {
+    expect(analyze.max()).toBe(8);
+})
+
+ it ("Analyze Array - Length", () => {
+     expect(analyze.length()).toBe(6);
 })
